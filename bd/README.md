@@ -1,44 +1,49 @@
-# Requerimientos
+# Base de datos
 
-- MySQL instalado en su sistema. Desarrollado con Ver 8.0.31 for Win64 on x86_64 (MySQL Community Server - GPL).
-- Acceso de administrador a MySQL.
+## Requerimientos
 
-# Despliegue y Ejecución
+- MySQL
+- Acceso de administrador (`root` u otro usuario con privilegios para crear BD y usuarios).
 
-1. Clonar este repositorio:
-   ```
-   git clone https://github.com/usuario/repositorio.git
-   ```
+##  Despliegue
 
-2. Iniciar sesión en MySQL como usuario root:
-   ```
+1. Abrir terminal y entrar a MySQL como administrador:
+
+   ```bash
    mysql -u root -p
    ```
 
-3. Cargar el script de creación de la base de datos:
-   ```
-   source ruta_del_script_creacion_bd.sql
-   ```
-   Ejemplo: `D:\SRC\GitHub\tonysoft2018\tesffullstack\bd\script_creacion_bd.sql`
+2. Ejecutar el script:
 
-4. Cambiar a la base de datos recién creada:
-   ```
-   USE bd_garcia;
+   ```sql
+   source /ruta/al/proyecto/examen/tesffullstack/bd/script_bd.sql
    ```
 
-5. Ejecutar la consulta para verificar los datos en la tabla person:
-   ```
-   SELECT * FROM person;
+
+3. Verificar que la base y la tabla existen:
+
+   ```sql
+   SHOW DATABASES LIKE 'bd_asqui';
+   USE bd_asqui;
+   DESCRIBE person;
    ```
 
-6. Crear un nuevo usuario para la conexión del backend y otorgarle privilegios:
-   ```
-   CREATE USER 'conexion'@'localhost' IDENTIFIED BY 'Wk2!rT8s@6w';
-   GRANT ALL PRIVILEGES ON bd_garcia.* TO 'conexion'@'localhost';
-   FLUSH PRIVILEGES;
+4. Verificar permisos del usuario `conexion`:
+
+   ```sql
+   SHOW GRANTS FOR 'conexion'@'localhost';
    ```
 
-7. Salir de MySQL:
+5. Probar la conexión con el usuario creado:
+
+   ```bash
+   mysql -u conexion -p bd_asqui
    ```
+
+   Contraseña: `123456`
+
+6. Salir:
+
+   ```sql
    exit;
    ```
