@@ -35,7 +35,7 @@ Se abre el navegador en **http://localhost:3000**
 
 ## Variables de entorno (opcional)
 
-Crear `.env` en `app-ui/` si el API no está en el puerto por defecto:
+Crear `.env` en `app-ui/`:
 
 ```env
 REACT_APP_API_URL=http://localhost:8080
@@ -45,15 +45,15 @@ REACT_APP_API_URL=http://localhost:8080
 
 | Pantalla | Requisito | Archivo |
 |----------|-----------|---------|
-| Listado | 12.1 Botón Crear | `PersonList.js` |
-| Listado | 12.2 Todas las personas | GET `/person` |
-| Listado | 12.3 Editar / Borrar por fila | botones en tabla |
-| Formulario | 14.1 Guardar / Cancelar | `PersonForm.js` |
-| Formulario | 14.2 Datos al editar | carga por id |
+| Listado | Botón Crear | `PersonList.js` |
+| Listado | Todas las personas | GET `/person` |
+| Listado | Editar / Borrar por fila | botones en tabla |
+| Formulario | Guardar / Cancelar | `PersonForm.js` |
+| Formulario | Datos al editar | carga por id |
 
 ## Capturas de pantalla
 
-Guardar imágenes en la carpeta `screenshots/`:
+Imágenes en la carpeta `screenshots/`:
 
 - `01-listado.png` — listado con personas
 - `02-crear.png` — formulario vacío
@@ -77,11 +77,9 @@ src/
 npm run build
 ```
 
-La carpeta `build/` queda lista para desplegar en cualquier hosting estático.
-
 ## Prueba rápida en el navegador
 
 1. Crear una persona desde el botón **Crear** → **Guardar**
 2. Verificar que aparece en el listado
-3. **Editar** → cambiar puesto o sueldo → **Guardar**
+3. **Editar** → **Guardar**
 4. **Borrar** → confirmar → desaparece del listado
