@@ -15,7 +15,7 @@ cd app-ui
 npm install
 ```
 
-## Ejecución en local (punto 13)
+## Ejecución en local
 
 **Terminal 1 — Backend:**
 
@@ -41,7 +41,7 @@ Crear `.env` en `app-ui/` si el API no está en el puerto por defecto:
 REACT_APP_API_URL=http://localhost:8080
 ```
 
-## Pantallas (puntos 12 y 14)
+## Pantallas
 
 | Pantalla | Requisito | Archivo |
 |----------|-----------|---------|
@@ -51,7 +51,7 @@ REACT_APP_API_URL=http://localhost:8080
 | Formulario | 14.1 Guardar / Cancelar | `PersonForm.js` |
 | Formulario | 14.2 Datos al editar | carga por id |
 
-## Capturas de pantalla (punto 15.2)
+## Capturas de pantalla
 
 Guardar imágenes en la carpeta `screenshots/`:
 
@@ -66,8 +66,8 @@ Guardar imágenes en la carpeta `screenshots/`:
 src/
 ├── api/personApi.js       # Llamadas al backend
 ├── components/
-│   ├── PersonList.js      # Listado (12)
-│   └── PersonForm.js      # Crear / editar (14)
+│   ├── PersonList.js      # Listado
+│   └── PersonForm.js      # Crear / editar
 └── App.js                 # Navegación entre vistas
 ```
 
@@ -78,10 +78,6 @@ npm run build
 ```
 
 La carpeta `build/` queda lista para desplegar en cualquier hosting estático.
-
-## CORS
-
-Si el navegador bloquea las peticiones, el backend debe permitir `http://localhost:3000`. En Spring Boot agregar `@CrossOrigin(origins = "http://localhost:3000")` en `PersonController` o configuración global CORS.
 
 ## Prueba rápida en el navegador
 
